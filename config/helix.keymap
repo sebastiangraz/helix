@@ -66,7 +66,7 @@
     UC_MACRO(name ## _lower, &kp L0 &kp L1 &kp L2 &kp L3) \
     UC_MODMORPH(name, &name ## _lower, &none)
 
-# Euro sign
+// Euro sign
 ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
 
 
