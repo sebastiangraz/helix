@@ -12,6 +12,7 @@
             #binding-cells = <0>;
             bindings = <&kp P>, <&kp MINUS>;
             mods = <(MOD_LGUI|MOD_RCTL)>;
+            keep-mods = <(MOD_LGUI)>;
         };
     };
 
