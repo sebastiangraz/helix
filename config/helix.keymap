@@ -20,6 +20,15 @@ However, 'LANG1' and 'LANG2' are fully-functioning candidates for 'kana' and 'ei
 As such, those are in use within the default layer at this time.*/
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        p-minus {
+            bindings = <&kp LG(LEFT_GUI)>;
+            key-positions = <36 22>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -32,11 +41,11 @@ As such, those are in use within the default layer at this time.*/
             // | ADJUST |  ESC   |  ALT   |  LGUI  | EISUU  | LOWER  | SPACE  |                    |  SPACE | RAISE  |  KANA  |  LEFT  |  DOWN  |  UP    |  RIGHT |
 
             bindings = <
-&kp ESCAPE                         &kp N1            &kp N2    &kp N3        &kp N4  &kp N5                          &kp N6              &kp N7         &kp N8     &kp N9      &kp N0    &kp BACKSPACE
-&kp TAB                            &kp Q             &kp W     &kp E         &kp R   &kp T                           &kp Y               &kp U          &kp I      &kp O       &kp P     &kp EQUAL
-&kp GRAVE                          &kp A             &kp S     &kp D         &kp F   &kp G                           &kp H               &kp J          &kp K      &kp L       &kp SEMI  &kp SQT
-&kp LSHFT                          &kp Z             &kp X     &kp C         &kp V   &kp B   &kp LBKT     &kp RBKT   &kp N               &kp M          &kp COMMA  &kp PERIOD  &kp UP    &kp RET
-&kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp LEFT_CONTROL  &kp LALT  &kp LEFT_GUI  &mo 1   &mo 2   &kp SPACE    &kp SPACE  &kp RIGHT_CONTROL   &kp BACKSLASH  &kp SLASH  &kp LEFT    &kp DOWN  &kp RIGHT
+&kp ESCAPE                         &kp N1            &kp N2    &kp N3        &kp N4  &kp N5                          &kp N6             &kp N7         &kp N8     &kp N9      &kp N0    &kp BACKSPACE
+&kp TAB                            &kp Q             &kp W     &kp E         &kp R   &kp T                           &kp Y              &kp U          &kp I      &kp O       &kp P     &kp EQUAL
+&kp GRAVE                          &kp A             &kp S     &kp D         &kp F   &kp G                           &kp H              &kp J          &kp K      &kp L       &kp SEMI  &kp SQT
+&kp LSHFT                          &kp Z             &kp X     &kp C         &kp V   &kp B   &kp LBKT     &kp RBKT   &kp N              &kp M          &kp COMMA  &kp PERIOD  &kp UP    &kp RET
+&kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp LEFT_CONTROL  &kp LALT  &kp LEFT_GUI  &mo 1   &mo 2   &kp SPACE    &kp SPACE  &kp RIGHT_CONTROL  &kp BACKSLASH  &kp SLASH  &kp LEFT    &kp DOWN  &kp RIGHT
             >;
         };
 
