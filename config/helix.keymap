@@ -23,9 +23,15 @@ As such, those are in use within the default layer at this time.*/
     combos {
         compatible = "zmk,combos";
 
-        p-minus {
-            bindings = <&kp LG(LEFT_GUI)>;
-            key-positions = <36 22>;
+        gui-minus {
+            bindings = <&kp MINUS>;
+            key-positions = <22 53>;
+            timeout-ms = <0>;
+        };
+
+        gui-shift-underscore {
+            bindings = <&kp UNDER>;
+            key-positions = <53 22>;
         };
     };
 
