@@ -9,7 +9,9 @@
 #define LOWER  1
 #define RAISE  2
 
-
+&sl {
+    release-after-ms = <650>;
+};
 
 / {
     behaviors {
