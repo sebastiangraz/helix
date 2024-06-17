@@ -25,7 +25,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =  <&kp BACKSPACE &kp BACKSPACE>,
-                        <&macro_press &mo 1>
+                        <&macro_press &mo 1>,
+                        <&macro_wait_time 250>,
+                        <&macro_press &mo 2>
                         ;
         };
 
