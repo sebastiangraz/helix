@@ -32,7 +32,7 @@
         backspacemacro: backspacemacro{
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =  <&kp BACKSPACE>,
+            bindings =  <&kp BACKSPACE &key_repeat>,
                         <&sl 1>
                         ;
         };
