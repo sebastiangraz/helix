@@ -17,8 +17,14 @@
         minustap: minustap {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp MINUS>, <&kp BACKSPACE>;
+            tapping-term-ms = <150>;
+            bindings = <&kp MINUS>, <&minustapmacro>;
+        };
+
+        minustapmacro: minustapmacro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE &kp BACKSPACE>;
         };
 
         euro: euro {
