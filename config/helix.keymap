@@ -20,7 +20,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
-            bindings = <&kp EQUAL>, <&minustapmacro>;
+            bindings = <&kp EQUAL>, <&equaltapmacro>;
         };
 
         equaltapmacro: equaltapmacro {
