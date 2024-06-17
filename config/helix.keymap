@@ -14,22 +14,16 @@
 / {
     behaviors {
 
-        deletetap: deletetap {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp N1>, <&kp N2>, <&kp N3>;
-        };
-
-        tap_dance_min_back {
+        tap_dance_min_back: tap_dance_min_back {
             compatible = "zmk,tap-dance";
             #binding-cells = <0>;
             label = "Minus-Backspace Tap Dance";
             bindings = <&kp MINUS &td_min_back>;
         };
     
-        td_min_back {
+        td_min_back: td_min_back {
             compatible = "zmk,tap-dance";
+            #binding-cells = <0>;
             bindings = <&kp MINUS &kp BACKSPACE>;
         };
 
