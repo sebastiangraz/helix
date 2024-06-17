@@ -24,7 +24,9 @@
         minustapmacro: minustapmacro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp BACKSPACE &kp BACKSPACE>;
+            bindings =  <&kp BACKSPACE &kp BACKSPACE>,
+                        <&macro_press &mo 1>
+                        ;
         };
 
         euro: euro {
@@ -87,7 +89,7 @@
 
         lower_layer {
             bindings = <
-                &trans              &trans                &trans            &trans            &trans            &trans                                                        &trans          &trans          &trans            &trans              &trans           &trans
+                &trans              &trans                &trans            &trans            &trans            &trans                                                        &trans          &trans          &trans            &trans              &trans           &kp BACKSPACE
                 &trans              &trans                &trans            &trans            &trans            &trans                                                        &trans          &trans          &trans            &trans              &trans           &trans
                 &trans              &trans                &trans            &trans            &trans            &trans                                                        &trans          &trans          &trans            &trans              &kp K_MUTE       &trans
                 &trans              &trans                &trans            &trans            &trans            &trans            &trans                    &trans            &trans          &trans          &trans            &trans              &kp C_VOLUME_UP  &trans
