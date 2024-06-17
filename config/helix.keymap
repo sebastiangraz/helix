@@ -14,20 +14,19 @@
 / {
     behaviors {
 
-        minustap: minustap {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <220>;
-            bindings = <&kp MINUS>, <&minustapmacro>;
-        };
-
         minustapmacro: minustapmacro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =  <&kp BACKSPACE &kp BACKSPACE>,
-                        <&macro_press &mo 1>,
-                        <&macro_wait_time 250>,
-                        <&macro_press &mo 0>
+                        <&sl 1>
+                        ;
+        };
+
+        backspacemacro: backspacemacro{
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =  <&kp BACKSPACE>,
+                        <&sl 1>
                         ;
         };
 
@@ -91,7 +90,7 @@
 
         lower_layer {
             bindings = <
-                &trans              &trans                &trans            &trans            &trans            &trans                                                        &trans          &trans          &trans            &trans              &trans           &kp BACKSPACE
+                &trans              &trans                &trans            &trans            &trans            &trans                                                        &trans          &trans          &trans            &trans              &trans           &backspacemacro
                 &trans              &trans                &trans            &trans            &trans            &trans                                                        &trans          &trans          &trans            &trans              &trans           &trans
                 &trans              &trans                &trans            &trans            &trans            &trans                                                        &trans          &trans          &trans            &trans              &kp K_MUTE       &trans
                 &trans              &trans                &trans            &trans            &trans            &trans            &trans                    &trans            &trans          &trans          &trans            &trans              &kp C_VOLUME_UP  &trans
